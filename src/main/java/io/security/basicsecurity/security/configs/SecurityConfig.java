@@ -41,9 +41,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/messages").hasRole("MANAGER")
 			.antMatchers("/config").hasRole("ADMIN")
 			.anyRequest().authenticated()
-			
 		.and()
 			.formLogin()
+			.loginPage("/login")
+			.loginProcessingUrl("/login_proc")
+			.defaultSuccessUrl("/")
+			.permitAll()
 		;
 	}
 	
@@ -52,5 +55,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
 	}
 
-	
 }
