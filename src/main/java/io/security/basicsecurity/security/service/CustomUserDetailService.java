@@ -1,4 +1,4 @@
-package io.security.basicsecurity.security.configs.service;
+package io.security.basicsecurity.security.service;
 
 import io.security.basicsecurity.domain.Account;
 import io.security.basicsecurity.repository.UserRepository;
