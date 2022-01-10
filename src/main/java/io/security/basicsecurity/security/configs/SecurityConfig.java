@@ -53,7 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.loginProcessingUrl("/login_proc")
 			.defaultSuccessUrl("/")
 			.permitAll()
-			.authenticationDetailsSource(authenticationDetailsSource())
+			.authenticationDetailsSource(authenticationDetailsSource)
 		;
 	}
 	
